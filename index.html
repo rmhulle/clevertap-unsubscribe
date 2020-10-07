@@ -1,191 +1,181 @@
 <html>
-  <head>
+
+<head>
     <style>
-      * {
-        box-sizing: border-box;
-        font-family: Arial, Helvetica, sans-serif;
-      }
-  
-      body { margin: 0; }
-      .container {
-        max-width: 760px;
-        margin: 0 auto;
-        padding: 20px;
-      }
-  
-      img {
-        margin-bottom: 24px;
-      }
-  
-      p {
-        font-family: Arial;
-        font-size: 16px;
-        color: #555555;
-        line-height: 150%;
-        margin-top: 0px;
-        margin-bottom: 24px;
-      }
-​
-      form {color: #555555;}
-​
-      input[type="radio"] {
-        display:block;
-        color: #555555;
-        margin-bottom: 24px;
-      }
-  
-      input[type="radio" i] {
-        display:inline-block;
-        margin: 0px 6px 8px 0px;
-      }
-  
-      input#button {
-        display: block;
-        white-space: normal;
-      }
-  
-      label {
-        display: block;
-        margin-bottom: 8px;
-      }
-​
-      button {
-        display: block;
-        min-width: 180px;
-        font-size: 16px;
-        border:0;
-        border-radius: 4px;
-        font-family: Arial;
-        font-weight: bold;
-        color: #fff;
-        padding:16px;
-        background-color: #333333;
-        margin-bottom: 16px;
-      }
+        * {
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        .container {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        img {
+            margin-bottom: 24px;
+        }
+
+        p {
+            font-family: Arial;
+            font-size: 16px;
+            color: #555555;
+            line-height: 150%;
+            margin-top: 0px;
+            margin-bottom: 24px;
+        }
+
+        ​ form {
+            color: #555555;
+        }
+
+        ​ input[type="radio"] {
+            display: block;
+            color: #555555;
+            margin-bottom: 24px;
+        }
+
+        input[type="radio"i] {
+            display: inline-block;
+            margin: 0px 6px 8px 0px;
+        }
+
+        input#button {
+            display: block;
+            white-space: normal;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        ​ button {
+            appearance: none;
+            display: block;
+            min-width: 180px;
+            font-size: 16px;
+            border: 0;
+            border-radius: 4px;
+            font-family: Arial;
+            font-weight: bold;
+            color: #fff;
+            padding: 16px;
+            background-color: #333333;
+            margin-bottom: 16px;
+        }
+
     </style>
-​
+    ​
     <script type="text/javascript">
-      var clevertap = {
-        event: [],
-        profile: [],
-        account: [],
-        onUserLogin: [],
-        notifications: [],
-      };
-      // replace with the CLEVERTAP_ACCOUNT_ID with the actual ACCOUNT ID value from your Dashboard -> Settings page
-      clevertap.account.push({ id: '8W4-54Z-R85Z' });
-      (function () {
-        var wzrk = document.createElement('script');
-        wzrk.type = 'text/javascript';
-        wzrk.async = true;
-        wzrk.src =
-          ('https:' == document.location.protocol
-            ? 'https://d2r1yp2w7bby2u.cloudfront.net'
-            : 'http://static.clevertap.com') + '/js/a.js';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(wzrk, s);
-      })();
+        var clevertap = {
+            event: [],
+            profile: [],
+            account: [],
+            onUserLogin: [],
+            notifications: [],
+        };
+        // replace with the CLEVERTAP_ACCOUNT_ID with the actual ACCOUNT ID value from your Dashboard -> Settings page
+        clevertap.account.push({ id: 'TEST-K95-WK8-R85Z' });
+        (function () {
+            var wzrk = document.createElement('script');
+            wzrk.type = 'text/javascript';
+            wzrk.async = true;
+            wzrk.src =
+                ('https:' == document.location.protocol
+                    ? 'https://d2r1yp2w7bby2u.cloudfront.net'
+                    : 'http://static.clevertap.com') + '/js/a.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(wzrk, s);
+        })();
     </script>
-  </head>
+</head>
 ​
-  <body>
+
+<body>
     <div class="container" style="padding-top: 32px;">
-      <img src="https://static.cdn.responsys.net/i2/responsysimages/winebrasil/contentlibrary/formularios/141x80-preta.png" width="141px">
-      <p>
-        Você pode nos contar o motivo do cancelamento de sua inscrição?<br>Sua colaboração é importante para oferecermos sempre o melhor e para ter você de volta conosco.
-      </p>
-      <form id="form" name="form" method="POST" action="https://loja.wine.com.br/pub/rf">
-        <label for="OPT1"><input type="radio" name="OPT_OUT_WINE_MOTIVO" id="OPT1" onclick="javascript: f_outros2(); f_optout();" value="quantidade">Eu recebo muitos e-mails em geral</label>
-        <label for="OPT2"><input type="radio" name="OPT_OUT_WINE_MOTIVO" id="OPT2" onclick="javascript: f_outros2(); f_optout();" value="frequencia">A frequência de recebimento de mensagens é muito alta</label>
-        <label for="OPT3"><input type="radio" name="OPT_OUT_WINE_MOTIVO" id="OPT3" onclick="javascript: f_outros2(); f_optout();" value="tempo">Não tenho tempo suficiente para ler os e-mails</label>
-        <label for="OPT4"><input type="radio" name="OPT_OUT_WINE_MOTIVO" id="OPT4" onclick="javascript: f_outros2(); f_optout();" value="website">O website não permite que eu faça aquilo que eu desejo</label>
-        <label for="OPT5"><input type="radio" name="OPT_OUT_WINE_MOTIVO" id="OPT5" onclick="javascript: f_outros(); f_optout();" onselect="f_outros()" value="outros">Outros</label>
-​
-        <div id="outros_tr" style="display: none;">
-          <textarea name="OPT_OUT_WINE_MOTIVO_OUTROS" cols="45" rows="3" id="OPT_OUT_WINE_MOTIVO_OUTROS" style="background-color:#EBEBEB; border:1px solid;"></textarea>
+        <img src="https://static.cdn.responsys.net/i2/responsysimages/winebrasil/contentlibrary/formularios/141x80-preta.png"
+            width="141px">
+        <p>
+            Você pode nos contar o motivo do cancelamento de sua inscrição?<br>Sua colaboração é importante para
+            oferecermos sempre o melhor e para ter você de volta conosco.
+        </p>
+        <label for="OPT1"><input type="radio" name="OPT_OUT_WINE_MOTIVO" id="OPT1" value="quantidade">Eu recebo
+            <form id="form" name="form">
+                muitos e-mails em
+                geral</label>
+        <label for="OPT2"><input type="radio" name="OPT_OUT_WINE_MOTIVO" id="OPT2" value="frequencia">A frequência
+            de recebimento de
+            mensagens é muito alta</label>
+        <label for="OPT3"><input type="radio" name="OPT_OUT_WINE_MOTIVO" id="OPT3" value="tempo">Não tenho tempo
+            suficiente para ler os
+            e-mails</label>
+        <label for="OPT4"><input type="radio" name="OPT_OUT_WINE_MOTIVO" id="OPT4" value="website">O website não
+            permite que eu faça
+            aquilo que eu desejo</label>
+        <label for="OPT5"><input type="radio" name="OPT_OUT_WINE_MOTIVO" id="OPT5" value="outros">Outros</label> ​
+        </form>
+        <div>
+            <input type="hidden" id="email" />
+            <br />
+            <button onclick="unsubscribe()">Cancelar inscrição</button>
+            <button onclick="resubscribe()">Reinscrever-se</button>
         </div>
-        <input type="hidden" id="EMAIL_PERMISSION_STATUS_" name="EMAIL_PERMISSION_STATUS_">
-        <input id="encodeurl" type="hidden" name="encodeurl" value="_ri_=X0Gzc2X%3DAQpglLjHJlTQGkaCFqm2eqruYuRGXRAzg1BSDmUSzf1zezfh8j5S0SzdiwEsGKkJ5JSzgD4Itlq9bySa0LVXMtX%3DAQpglLjHJlTQGo7rzayzehukpaMrg7nzbqrR8c9c8YczflXR64Er3mTwyXdMkL0JUC8Lh4psd1zdnA676&amp;_ei_=EolaGGF4SNMvxFF7KucKuWPEF5S7oFy9V6uR6TVTFAvugtpX22bA1WBaUFEf_Lehx2imqI6_XZlmohxtHdeLJLKNFNQwt3bIs5-uX54hVfgbtDDnG4zqsMnaM4Ey3E-b1L67f0-5EJ3FAGXfJ4tBBm0_RDO8WnRQ">
-        <!-- <input id="button" type="submit" style="margin-top: 48px;font-size: 16px; border:0; font-family: Arial; font-weight: bold; color: #fff; padding:16px; background-color: #333333" name="button" onclick="return tamanho()" value="Responder e confirmar alteração"> -->
-      </form>
-​
-      <input type="hidden" name="CAMPAIGN_" value="WineOptout">
-      <input type="hidden" name="charset_" value="UTF-8">
-      <input type="hidden" name="_Sent_" value="2020-10-02 13:47:55.904">
-      <input type="hidden" name="_LID_" value="13407042">
-      <input type="hidden" name="_ri_" value="X0Gzc2X%3DAQpglLjHJlTQGo7rzayzehukpaMrg7nzbqrR8bbK2XMF5e0WkYsGu2iUzalv3HnsnzfCBaqzeBwzeGdzeOLGVwjpnpgHlpgneHmgJoXX0Gzc2X%3DAQpglLjHJlTQGnuAzchBIo1Fvajzfk7tyUsvXj62oUAzgDXTocASCnMedX2SXEbRiPu9AdcWurzgF5nd">
-      <input type="hidden" name="_ei_" value="EtmRArNO2XWwP3EOZcn0NKFKTc7w8kl26BgwsFTwslrsd_oQA2aZcxaKlQN5SuU3mRDh2p8-2cdjDkJmQAQ6f9zFah7Wg_1ieAA7A8Wz3M">
-      <input type="hidden" name="_di_" value="4lmek9gsaf5khlupgpdfqb0egdnl78aehdmceiq5vh1lugcl2slg">
-      <input type="hidden" name="__HIDDEN_FIELD_NAMES__" value="EMAIL_PERMISSION_STATUS_;encodeurl;CAMPAIGN_;charset_;_Sent_;_LID_;_ri_;_ei_;_di_;__HIDDEN_FIELD_NAMES__">
-​
-      <!-- clevertap elements -->
-      <div>
-        <input type="hidden" id="email"/>
-        <br />
-        <button onclick="unsubscribe()">Cancelar inscrição</button>
-        <button onclick="resubscribe()">Reinscrever-se</button>
-      </div>
     </div>
-​
+
+
+    ​
+    <!-- clevertap elements -->
+
+    </div>
+    ​
     <script>
-      //Javascript
-      // Should be true only if your server is url encoding the URL on unsubscribe landing page
-      var isReEncode = false;
-      // on  page load, fetch the email id of the user.
-      window.onload = function () {
-        $WZRK_WR.getEmail(isReEncode);
-      };
-      // will be called after the email id of the user has been fetched
-      function wzrk_email_fetched(emailStr) {
-        document.getElementById('email').value = emailStr;
-      }
-      // will be called after the subscription preferences for the user have been updated
-      function wzrk_email_subscription(status) {
-        //status 0 : unsubscribed, status 1 : subscribed
-        // todo - you can show a success message to the user from here
-        var statusLabel = 'subscribed';
-        if (status == 0) {
-          statusLabel = 'unsubscribed';
+        //Javascript
+        // Should be true only if your server is url encoding the URL on unsubscribe landing page
+        var isReEncode = false;
+        var motive = "outros";
+        // on  page load, fetch the email id of the user.
+        window.onload = function () {
+            $WZRK_WR.getEmail(isReEncode);
+
+        };
+        // will be called after the email id of the user has been fetched
+        function wzrk_email_fetched(emailStr) {
+            document.getElementById('email').value = emailStr;
         }
-        alert("You've been " + statusLabel);
-      }
-      // call this function to unsubscribe the user
-      function unsubscribe(isReEncode) {
-        $WZRK_WR.unSubEmail(isReEncode);
-      }
-      // call this function to resubscribe the user
-      function resubscribe(isReEncode) {
-        $WZRK_WR.subEmail(isReEncode);
-      }
-    </script>
-​
-    <!-- original script -->
-    <script LANGUAGE="JavaScript" TYPE="text/javascript">
-      function f_outros() {
-          document.getElementById('outros_tr').style.display = 'block'
-        }
-  
-      function f_outros2() {
-          document.getElementById('outros_tr').style.display = 'none'
-        }
-  
-      function f_optout() {
-          document.getElementById("EMAIL_PERMISSION_STATUS_").value = 'O';
-        }
-  
-      function tamanho() {
-          var motivo = document.getElementById('OPT_OUT_WINE_MOTIVO_OUTROS').value;
-          if(motivo.length > 25)
-            {
-              alert("Desculpe, seu motivo não pode ultrapassar 25 caracteres");
-              return false;
+
+        // will be called after the subscription preferences for the user have been updated
+        function wzrk_email_subscription(status) {
+            //status 0 : unsubscribed, status 1 : subscribed
+            // todo - you can show a success message to the user from here
+            var statusLabel = 'subscribed';
+            if (status == 0) {
+                statusLabel = 'unsubscribed';
             }
-          else
-            {
-              return true;
-            }
+            alert("You've been " + statusLabel);
         }
-        
+        // call this function to unsubscribe the user
+
+        function unsubscribe(isReEncode) {
+            $WZRK_WR.unSubEmail(isReEncode);
+            var motive = Array.from(form.elements.OPT_OUT_WINE_MOTIVO).find(radio => radio.checked);
+            clevertap.profile.push({
+                "Site": {
+                    "Email Unsubscription Motive": motive.value
+                }
+            });
+        }
+        // call this function to resubscribe the user
+        function resubscribe(isReEncode) {
+            $WZRK_WR.subEmail(isReEncode);
+        }
     </script>
-  </body>
+    ​
+</body>
+
 </html>
