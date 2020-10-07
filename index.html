@@ -34,24 +34,12 @@
             color: #555555;
         }
 
-        ​ input[type="radio"] {
-            display: block;
-            color: #555555;
-            margin-bottom: 24px;
-        }
-
-        input[type="radio"i] {
-            display: inline-block;
-            margin: 0px 6px 8px 0px;
-        }
-
         input#button {
             display: block;
             white-space: normal;
         }
 
         label {
-            display: block;
             margin-bottom: 8px;
         }
 
@@ -81,7 +69,7 @@
             notifications: [],
         };
         // replace with the CLEVERTAP_ACCOUNT_ID with the actual ACCOUNT ID value from your Dashboard -> Settings page
-        clevertap.account.push({ id: 'TEST-K95-WK8-R85Z' });
+        clevertap.account.push({ id: '8W4-54Z-R85Z' });
         (function () {
             var wzrk = document.createElement('script');
             wzrk.type = 'text/javascript';
@@ -105,26 +93,37 @@
             Você pode nos contar o motivo do cancelamento de sua inscrição?<br>Sua colaboração é importante para
             oferecermos sempre o melhor e para ter você de volta conosco.
         </p>
-        <label for="OPT1"><input type="radio" name="OPT_OUT_WINE_MOTIVO" id="OPT1" value="quantidade">Eu recebo
-            <form id="form" name="form">
-                muitos e-mails em
-                geral</label>
-        <label for="OPT2"><input type="radio" name="OPT_OUT_WINE_MOTIVO" id="OPT2" value="frequencia">A frequência
-            de recebimento de
-            mensagens é muito alta</label>
-        <label for="OPT3"><input type="radio" name="OPT_OUT_WINE_MOTIVO" id="OPT3" value="tempo">Não tenho tempo
-            suficiente para ler os
-            e-mails</label>
-        <label for="OPT4"><input type="radio" name="OPT_OUT_WINE_MOTIVO" id="OPT4" value="website">O website não
-            permite que eu faça
-            aquilo que eu desejo</label>
-        <label for="OPT5"><input type="radio" name="OPT_OUT_WINE_MOTIVO" id="OPT5" value="outros">Outros</label> ​
+        <form id="form" name="form">
+            <div>
+                <input type="radio" name="OPT_OUT_WINE_MOTIVO" id="OPT1" value="quantidade">
+                <label for="OPT1">Eu recebo muitos e-mails em geral</label>
+            </div>
+            <div>
+                <input type="radio" name="OPT_OUT_WINE_MOTIVO" id="OPT2" value="frequencia">
+                <label for="OPT2">A frequência de recebimento de mensagens é muito alta</label>
+            </div>
+            <div>
+                <input type="radio" name="OPT_OUT_WINE_MOTIVO" id="OPT3" value="tempo">
+                <label for="OPT3">Não tenho tempo suficiente para ler os e-mails</label>
+            </div>
+            <div>
+                <input type="radio" name="OPT_OUT_WINE_MOTIVO" id="OPT4" value="website">
+                <label for="OPT4">O website não permite que eu faça aquilo que eu desejo</label>
+            </div>
+            <div>
+                <input type="radio" name="OPT_OUT_WINE_MOTIVO" id="OPT5" value="outros">
+                <label for="OPT5">Outros</label>
+            </div>
         </form>
         <div>
             <input type="hidden" id="email" />
             <br />
-            <button onclick="unsubscribe()">Cancelar inscrição</button>
-            <button onclick="resubscribe()">Reinscrever-se</button>
+            <button
+                style="-webkit-appearance: none !important;-moz-appearance: none !important;appearance: none !important;min-width: 180px;font-size: 16px;border: 0;border-radius: 4px;font-family: Arial;font-weight: bold;color: #fff;padding: 16px;background-color: #333333;margin-bottom: 16px;margin-right:8px;"
+                onclick="unsubscribe()">Cancelar inscrição</button>
+            <button
+                style="-webkit-appearance: none !important;-moz-appearance: none !important;appearance: none !important;min-width: 180px;font-size: 16px;border: 0;border-radius: 4px;font-family: Arial;font-weight: bold;color: #fff;padding: 16px;background-color: #333333;margin-bottom: 16px;"
+                onclick="resubscribe()">Reinscrever-se</button>
         </div>
     </div>
 
@@ -163,12 +162,13 @@
 
         function unsubscribe(isReEncode) {
             $WZRK_WR.unSubEmail(isReEncode);
-            var motive = Array.from(form.elements.OPT_OUT_WINE_MOTIVO).find(radio => radio.checked);
-            clevertap.profile.push({
-                "Site": {
-                    "Email Unsubscription Motive": motive.value
-                }
-            });
+            // Enviar o motivo, mas tem que puxar o profile antes que não está funcionando.
+            // var motive = Array.from(form.elements.OPT_OUT_WINE_MOTIVO).find(radio => radio.checked);
+            // clevertap.profile.push({
+            //     "Site": {
+            //         "Email Unsubscription Motive": motive.value
+            //     }
+            // });
         }
         // call this function to resubscribe the user
         function resubscribe(isReEncode) {
